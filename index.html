@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vikrant D. Shetty & Associates</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: { colors: { navy: "#1F3A63" } }
+      }
+    }
+  </script>
+
+  <!-- Global font: Book Antiqua -->
+  <style>
+    html, body, * { font-family: "Book Antiqua", Palatino, "Palatino Linotype", serif; }
+    .icon-24 { width:24px; height:24px; }
+  </style>
+</head>
+<body class="bg-white text-slate-900">
+
+  <!-- ===== Disclaimer Modal ===== -->
+  <div id="disclaimerOverlay"
+       class="fixed inset-0 z-[9999] bg-black/70 flex items-center justify-center p-4">
+    <div class="w-full max-w-2xl rounded-2xl bg-white shadow-xl border border-slate-200 p-8">
+      <h3 class="text-2xl font-bold text-navy mb-3">Legal Disclaimer</h3>
+      <p class="text-slate-700 leading-relaxed">
+        As per the rules of the Bar Council of India, law firms are not permitted to solicit work and advertise.
+        By clicking “I Agree”, you acknowledge that you are seeking information about
+        <strong>Vikrant D. Shetty &amp; Associates</strong> of your own accord.
+        There has been no solicitation, advertisement or inducement by the firm or its members.
+        The content of this website is for informational purposes only and should not be interpreted as legal advice.
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 sm:justify-end">
+        <button id="discDisagree"
+                class="px-4 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100"
+                type="button">
+          I Disagree
+        </button>
+        <button id="discAgree"
+                class="px-4 py-2 rounded-lg bg-navy text-white hover:opacity-90"
+                type="button" autofocus>
+          I Agree
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <div id="pageContent" class="hidden">
+    <!-- Header -->
+    <header class="border-b bg-white">
+      <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col items-center text-center">
+        <img src="logo.png" alt="VDS Logo" class="h-28 w-auto" />
+        <p class="mt-3 text-navy font-bold text-lg">
+          Built on Trust, Defined by Expertise
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <!-- About Us (centered) -->
+      <section class="max-w-5xl mx-auto px-6 py-14 text-center">
+        <h2 class="text-3xl font-bold text-navy">About Us</h2>
+        <p class="mt-5 text-lg leading-relaxed text-slate-800">
+          <strong>Vikrant D. Shetty &amp; Associates</strong> is a law firm based in Mumbai.
+          Being experienced with the workings of the Indian legal system, we approach matters with a practical outlook
+          and are able to provide clients with a realistic overview of potential risks, costs and timelines that would be involved in their matters.
+          We ensure that all documentation and advice is delivered within promised timelines, without compromising on quality and clarity.
+        </p>
+      </section>
+
+      <!-- Practice Areas (3 × 3, centered headings + tiny pictograms) -->
+      <section class="py-14 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-3xl font-bold text-navy text-center">Practice Areas</h2>
+
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 1 -->
+            <article class="bg-white border border-navy/20 rounded-2xl p-6 shadow-sm text-center">
+              <div class="flex justify-center text-navy mb-3" aria-hidden="true">
+                <svg class="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3v18M5 7h14M7 7l-4 7h8l-4-7zm10 0l-4 7h8l-4-7z"/>
+                </svg>
+              </div>
+              <h3 class="font-bold text-navy mb-3">Arbitration &amp; Commercial Litigation</h3>
+              <ul class="text-left list-disc pl-5 text-sm text-slate-800 space-y-2">
+                <li>Commercial litigation across courts &amp; tribunals (Supreme Court, High Courts, NCLT, RERA, etc.).</li>
+                <li>Engagement with senior &amp; mid-level counsel as needed.</li>
+                <li>Hands-on arbitration experience, including settlement brokering.</li>
+              </ul>
+            </article>
+
+            <!-- 2 -->
+            <article class="bg-white border border-navy/20 rounded-2xl p-6 shadow-sm text-center">
+              <div class="flex justify-center text-navy mb-3" aria-hidden="true">
+                <svg class="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M2 21h10M7 16l5-5M8.5 7.5L12 11l4-4-3.5-3.5-4 4zM16 12l3 3"/>
+                </svg>
+              </div>
+              <h3 class="font-bold text-navy mb-3">Insolvency &amp; Bankruptcy (NCLT)</h3>
+              <ul class="text-left list-disc pl-5 text-sm text-slate-800 space-y-2">
+                <li>Expertise in representing creditors, debtors, insolvency professionals.</li>
+                <li>Advisory on Section 7/9/10 proceedings, drafting &amp; filing, CIRP management.</li>
+                <li>Representation in liquidation &amp; recovery proceedings, negotiation of resolution plans.</li>
+              </ul>
+            </article>
+
+            <!-- 3 -->
+            <article class="bg-white border border-navy/20 rounded-2xl p-6 shadow-sm text-center">
+              <div class="flex justify-center text-navy mb-3" aria-hidden="true">
+                <svg class="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="6" y="4" width="12" height="16" rx="1"/>
+                  <path d="M10 8h4M10 12h4M10 16h4"/>
+                </svg>
+              </div>
+              <h3 class="font-bold text-navy mb-3">Real Estate</h3>
+              <ul class="text-left list-disc pl-5 text-sm text-slate-800 space-y-2">
+                <li>Advisory on acquisition, disposition, development, leasing, construction, financing.</li>
+              </ul>
+            </article>
+
+            <!-- 4 -->
+            <article class="bg-white border border-navy/20 rounded-2xl p-6 shadow-sm text-center">
+              <div class="flex justify-center text-navy mb-3" aria-hidden="true">
+                <svg class="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 18l9 3 9-3-2-7H5l-2 7zM7 11V7l5-2 5 2v4"/>
+                </svg>
+              </div>
+              <h3 class="font-bold text-navy mb-3">Shipping</h3>
+              <ul class="text-left list-disc pl-5 text-sm text-slate-800 space-y-2">
+                <li>Experience with multinational and Indian corporations in ship breaking industry.</li>
+                <li>Admiralty disputes (charterparty, shipbuilding, cargo claims).</li>
+                <li>Ship arrest and release matters.</li>
+              </ul>
+            </article>
+
+            <!-- 5 -->
+            <article class="bg-white border border-navy/20 rounded-2xl p-6 shadow-sm text-center">
+              <div class="flex justify-center text-navy mb-3" aria-hidden="true">
+                <svg class="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="7" cy="11" r="3"/><path d="M10 11h10l-2 2 2 2-2 2"/>
+                </svg>
+              </div>
+              <h3 class="font-bold text-navy mb-3">Tenancy Disputes</h3>
+              <ul class="text-left list-disc pl-5 text-sm text-slate-800 space-y-2">
+                <li>Representation of landlords and tenants before the Hon’ble Small Causes Court.</li>
+                <li>Eviction, recovery of possession, tenancy rights.</li>
+              </ul>
+            </article>
+
+            <!-- 6 -->
+            <article class="bg-white border border-navy/20 rounded-2xl p-6 shadow-sm text-center">
+              <div class="flex justify-center text-navy mb-3" aria-hidden="true">
+                <svg class="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3l8 4v5c0 5-4 7-8 9-4-2-8-4-8-9V7l8-4z"/><path d="M12 8v8"/>
+                </svg>
+              </div>
+              <h3 class="font-bold text-navy mb-3">Intellectual Property</h3>
+              <ul class="text-left list-disc pl-5 text-sm text-slate-800 space-y-2">
+                <li>Registration, licensing, assignment of IP rights.</li>
+                <li>IP litigation, searches, infringement advisory.</li>
+              </ul>
+            </article>
+
+            <!-- 7 -->
+            <article class="bg-white border border-navy/20 rounded-2xl p-6 shadow-sm text-center">
+              <div class="flex justify-center text-navy mb-3" aria-hidden="true">
+                <svg class="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <path d="M14 2v6h6M10 13h4M10 17h4"/>
+                </svg>
+              </div>
+              <h3 class="font-bold text-navy mb-3">Tenders</h3>
+              <ul class="text-left list-disc pl-5 text-sm text-slate-800 space-y-2">
+                <li>Advising on issuance of tenders and handling tender-related disputes.</li>
+              </ul>
+            </article>
+
+            <!-- 8 -->
+            <article class="bg-white border border-navy/20 rounded-2xl p-6 shadow-sm text-center">
+              <div class="flex justify-center text-navy mb-3" aria-hidden="true">
+                <svg class="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="6" y="4" width="12" height="16" rx="1"/>
+                  <path d="M9 8h6M9 12h6M9 16h6"/>
+                </svg>
+              </div>
+              <h3 class="font-bold text-navy mb-3">General Commercial Contracts</h3>
+              <ul class="text-left list-disc pl-5 text-sm text-slate-800 space-y-2">
+                <li>Drafting of franchise, tender, partnership, transfer, shareholder, JV, employment &amp; supply contracts, and agreements relating to hotel management &amp; hospitality.</li>
+              </ul>
+            </article>
+
+            <!-- 9 -->
+            <article class="bg-white border border-navy/20 rounded-2xl p-6 shadow-sm text-center">
+              <div class="flex justify-center text-navy mb-3" aria-hidden="true">
+                <svg class="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M8 4h10a2 2 0 0 1 2 2v10H9a3 3 0 0 0-3 3V6a2 2 0 0 1 2-2zM6 19h10"/>
+                </svg>
+              </div>
+              <h3 class="font-bold text-navy mb-3">Testamentary Matters, Probates &amp; Estate Planning</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pro Bono Work (centered) -->
+      <section class="max-w-5xl mx-auto px-6 py-14 text-center">
+        <h2 class="text-3xl font-bold text-navy">Pro Bono Work</h2>
+        <p class="mt-5 text-lg leading-relaxed text-slate-800">
+          At Vikrant D. Shetty &amp; Associates, we strive to give back to the community by taking up pro bono matters for clients in need.
+          We believe access to justice should not be limited by financial means, and our team is committed to supporting individuals
+          and causes that require legal assistance.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer (white) -->
+    <footer class="bg-white border-t">
+      <div class="max-w-7xl mx-auto px-6 py-10 text-center">
+        <picture>
+          <source srcset="logo.png" type="image/svg+xml">
+          <img src="logo.png" alt="VDS Logo" class="mx-auto h-20 w-auto" />
+        </picture>
+        <p class="mt-4 text-sm text-slate-600">
+          © <span id="y"></span> Vikrant D. Shetty &amp; Associates. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Disclaimer
+    const KEY = "vds_disclaimer_ack";
+    const overlay = document.getElementById("disclaimerOverlay");
+    const page = document.getElementById("pageContent");
+    const agree = document.getElementById("discAgree");
+    const disagree = document.getElementById("discDisagree");
+
+    function acceptDisclaimer() {
+      overlay.style.display = "none";
+      page.classList.remove("hidden");
+      localStorage.setItem(KEY, "1");
+    }
+
+    agree.addEventListener("click", acceptDisclaimer);
+    disagree.addEventListener("click", () => {
+      window.location.href = "https://www.google.com";
+    });
+
+    if (localStorage.getItem(KEY) === "1") {
+      acceptDisclaimer();
+    }
+  </script>
+</body>
+</html>
